@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserDetailsValidation {
+
 	/*
 	 * @purpose: As a User need to enter a valid First Name. First name starts with
 	 * Cap and has minimum 3 characters
@@ -49,6 +50,23 @@ public class UserDetailsValidation {
 		String regex = "^[a-z]+[+-_.]*[a-z]*[@][a-z]+[.][a-z]{2,4}[.]*([a-z]{2})*$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(email);
+		if (matcher.matches()) {
+			System.out.println("Valid");
+		} else {
+			System.out.println("Invalid");
+		}
+	}
+
+	/*
+	 * @purpose:As a User need to follow pre-defined Password rules. Rule1 – minimum
+	 * 8 Characters - NOTE – All rules must be passed
+	 * 
+	 * @function: To check password is Valid or not
+	 */
+	public static void isValidPassword(String password) {
+		String regex = "^[a-z0-9A-Z]{8,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
 		if (matcher.matches()) {
 			System.out.println("Valid");
 		} else {
