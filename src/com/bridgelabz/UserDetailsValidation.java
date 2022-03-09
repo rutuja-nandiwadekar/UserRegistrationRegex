@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserDetailsValidation {
+	static String regex;
 
 	/*
 	 * @purpose: As a User need to enter a valid First Name. First name starts with
@@ -47,7 +48,7 @@ public class UserDetailsValidation {
 	 * @function: To check email is Valid or not
 	 */
 	public static void isValidEmail(String email) {
-		String regex = "^[a-z]+[+-_.]*[a-z]*[@][a-z]+[.][a-z]{2,4}[.]*([a-z]{2})*$";
+		regex = "^[a-z]+[+-_.]*[a-z]*[@][a-z]+[.][a-z]{2,4}[.]*([a-z]{2})*$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(email);
 		if (matcher.matches()) {
@@ -58,15 +59,15 @@ public class UserDetailsValidation {
 	}
 
 	/*
-	 * @purpose:As a User need to follow pre-defined Password rules. Rule1 – minimum
-	 * 8 Characters - NOTE – All rules must be passed
+	 * @purpose:As a User need to follow pre defined Mobile Format - E.g. 91
+	 * 9919819801 - Country code follow by space and 10 digit number
 	 * 
-	 * @function: To check password is Valid or not
+	 * @function: To check MobileNumber is Valid or not
 	 */
-	public static void isValidPassword(String password) {
-		String regex = "^[a-z0-9A-Z]{8,}$";
+	public static void isValidMobileNumber(String mobileNumber) {
+		regex = "^[91]+[ ]?[6-9]{1}[0-9]{9}$";
 		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(password);
+		Matcher matcher = pattern.matcher(mobileNumber);
 		if (matcher.matches()) {
 			System.out.println("Valid");
 		} else {
