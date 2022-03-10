@@ -10,10 +10,10 @@ public class UserRegistrationMain extends UserDetailsValidation {
 		System.out.println("Welcome to User Registration Problem");
 
 		// calling method
-//		userFirstName();
-//		userLastName();
-//		userEmail();
-//		userMobileNumber();
+		userFirstName();
+		userLastName();
+		userEmail();
+		userMobileNumber();
 		userPassword();
 	}
 
@@ -45,7 +45,7 @@ public class UserRegistrationMain extends UserDetailsValidation {
 		UserDetailsValidation.isValidMobileNumber(mobileNumber);
 	}
 
-	// UC5 Ability to add Password
+	// UC7 Ability to add Password
 	public static void userPassword() {
 		System.out.println("Enter your password");
 		password = scanner.nextLine();

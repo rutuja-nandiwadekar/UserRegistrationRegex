@@ -77,13 +77,13 @@ public class UserDetailsValidation {
 
 	/*
 	 * @purpose:As a User need to follow pre-defined Password rules.- NOTE – All
-	 * rules must be passed Rule1 – minimum 8 Characters Rule2 – Should have at
-	 * least 1 Upper Case
+	 * rules must be passed Rule1 – minimum 8 Characters Rule2 – Rule3 Should have
+	 * at least 1 numeric number in the password
 	 * 
 	 * @function: To check password is Valid or not
 	 */
 	public static void isValidPassword(String password) {
-		regex = "^[a-z](?=.*[A-Z]).{8,}$";
+		regex = "^[a-z](?=.*[A-Z]+)(?=.*[0-9]+).{8,}$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
 		if (matcher.matches()) {
