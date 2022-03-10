@@ -74,4 +74,22 @@ public class UserDetailsValidation {
 			System.out.println("Invalid");
 		}
 	}
+
+	/*
+	 * @purpose:As a User need to follow pre-defined Password rules.- NOTE – All
+	 * rules must be passed Rule1 – minimum 8 Characters Rule2 – Should have at
+	 * least 1 Upper Case
+	 * 
+	 * @function: To check password is Valid or not
+	 */
+	public static void isValidPassword(String password) {
+		regex = "^[a-z](?=.*[A-Z]).{8,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		if (matcher.matches()) {
+			System.out.println("Valid");
+		} else {
+			System.out.println("Invalid");
+		}
+	}
 }
