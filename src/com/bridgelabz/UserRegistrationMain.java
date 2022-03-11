@@ -46,7 +46,7 @@ public class UserRegistrationMain extends UserDetailsValidation {
 		UserDetailsValidation.isValidMobileNumber(mobileNumber);
 	}
 
-	// UC5 to UC8 Ability to add Password
+	// UC5-UC8 Ability to add Password
 	public static void userPassword() {
 		System.out.println("Enter your password");
 		password = scanner.nextLine();
