@@ -15,6 +15,7 @@ public class UserRegistrationMain extends UserDetailsValidation {
 		userEmail();
 		userMobileNumber();
 		userPassword();
+		isValidAllEmail();
 	}
 
 	// UC1 Ability to add first name
@@ -51,5 +52,4 @@ public class UserRegistrationMain extends UserDetailsValidation {
 		password = scanner.nextLine();
 		UserDetailsValidation.isValidPassword(password);
 	}
-
 }
